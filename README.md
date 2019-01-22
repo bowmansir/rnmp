@@ -1,11 +1,13 @@
-# rnmp(便携式开发环境)
+# rnmp(基于 Docker 便携式开发环境)
 nginx+mysql+php+redis
+
+# 先得安装好 docker && docker-compose
 
 # 安装
 ```
 $ git clone git@github.com:bowmansir/rnmp.git
 $ cd rnmp
-$ docker-composer up -d
+$ docker-compose up -d
 ```
 
 # 配置说明
