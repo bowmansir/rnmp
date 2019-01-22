@@ -1,0 +1,3 @@
+/log/redis/*
+/log/nginx/*
+/service/mysql/data/*

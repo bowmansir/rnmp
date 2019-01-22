@@ -1,0 +1,60 @@
+version: '3'
+
+services:
+  nginx:
+    build: ./service/nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./app/:/var/www/
+      - ./service/nginx/conf/:/etc/nginx/conf.d/
+      - ./log/nginx:/var/log/nginx/
+    links:
+    - phpfpm:phpfpm
+    restart: always
+    command: nginx -g 'daemon off;'
+    networks:
+      - app
+
+  mysql:
+    build: ./service/mysql
+    ports:
+      - "9503:3306"
+    volumes:
+      - ./service/mysql/data/:/var/lib/mysql/
+    environment:
+      MYSQL_ROOT_PASSWORD: root@password
+    networks:
+      - app
+
+  redis:
+    build: ./service/redis
+    volumes:
+      - ./log/redis/redis.log:/usr/local/redis/redis.log
+      - ./service/redis/data/:/usr/local/redis/data/
+      - ./service/redis/redis.conf:/usr/local/redis/redis.conf
+    ports:
+      - "6380:6379"
+    restart: always
+    container_name: redis      
+
+  phpfpm:
+    build: ./service/php
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./app/:/var/www/
+      - ./log/php/:/var/log/php-fpm:rw
+    links:
+      - mysql
+      - redis
+    restart: always
+    command: php-fpm
+    networks:
+      - app  
+
+networks:
+  app:
+    driver: bridge    
+
+
