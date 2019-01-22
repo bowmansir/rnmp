@@ -1,0 +1,2 @@
+2019/01/22 03:40:21 [error] 6#6: *4 open() "/var/www/localhost/robots.txt" failed (2: No such file or directory), client: 192.168.1.20, server: localhost, request: "GET /robots.txt?1548128420190 HTTP/1.1", host: "192.168.1.108"
+2019/01/22 03:40:23 [error] 6#6: *4 open() "/var/www/localhost/robots.txt" failed (2: No such file or directory), client: 192.168.1.20, server: localhost, request: "GET /robots.txt?1548128422840 HTTP/1.1", host: "192.168.1.108"
