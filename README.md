@@ -5,7 +5,7 @@ nginx+mysql+php+redis
 
 # 安装
 ```
-$ git clone git@github.com:bowmansir/rnmp.git
+$ git clone https://github.com/bowmansir/rnmp.git
 $ cd rnmp
 $ docker-compose up -d
 ```
