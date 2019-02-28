@@ -1,4 +1,0 @@
-192.168.1.20 - - [22/Jan/2019:03:40:20 +0000] "GET / HTTP/1.1" 200 88189 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36" "-"
-192.168.1.20 - - [22/Jan/2019:03:40:21 +0000] "GET /robots.txt?1548128420190 HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36" "-"
-192.168.1.20 - - [22/Jan/2019:03:40:23 +0000] "GET / HTTP/1.1" 200 88360 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36" "-"
-192.168.1.20 - - [22/Jan/2019:03:40:23 +0000] "GET /robots.txt?1548128422840 HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36" "-"
