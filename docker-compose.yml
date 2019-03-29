@@ -22,6 +22,7 @@ services:
       - "9503:3306"
     volumes:
       - ./service/mysql/data/:/var/lib/mysql/
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root@password
     networks:
@@ -38,6 +39,8 @@ services:
     restart: always
     command: redis-server /usr/local/redis/redis.conf
     container_name: redis
+    networks:
+      - app
 
   phpfpm:
     build: ./service/php
